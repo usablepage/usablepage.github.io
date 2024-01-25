@@ -1,37 +1,18 @@
 <!DOCTYPE html>
 <html lang=pl>
 <head>
+<meta charset="UTF-8">
 <title>Strona Główna UsablePage</title>
-<style>
-body {
-margin: 0;
-padding: 0;
-display: flex;
-align-items: center, up;
-justify-content: center;
-height: 100vh;
- }
-div {
-margin: 0;
-padding: 0;
-}
-.container {
-}
-* {
-  box-sizing: border-box;
-  margin-left: 10px;
-}
-body { background-color: gray; }
-</style>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 <div style="width:700px; height:1930px; background-color:#f4ffa8; border:1px solid black;" class="container">
 <center><img src="splash.png" alt="Witaj na UsablePage :)" width="699px" style="margin-left:-10px;"></center>
 <h3>Przeglądarki Internetowe:</h3>
-<p> <a title="Firefox" href="firefox.html">Firefox</a> 
-<br><a title="Google Chrome" href="chrome.html">Chrome</a>
-<br><a title="Chromium" href="chromium.html">Chromium</a>
-<br><a title="Mypal" href="mypal.html">Mypal</a>
+<p> <button onclick="openFirefox()">Firefox</button>
+<br><button onclick="openChrome()">Chrome</button>
+<br><button onclick="openChromium()">Chromium</button>
+<br><button onclick="openMypal()">Mypal</button>
 </p>
 <h3>Sterowniki:</h3>
 <p> <a title="SDI Origin" href="https://www.glenn.delahoy.com/downloads/sdio/SDIO_1.12.19.760.zip">SDI Origin</a><a> Windows XP+</a>
@@ -98,5 +79,169 @@ body { background-color: gray; }
 <br><a href="https://epicgames-download1.akamaized.net/Builds/UnrealEngineLauncher/Installers/Win32/EpicInstaller-15.17.1.msi?launcherfilename=EpicInstaller-15.17.1.msi">Epic Games</a><a> Windows 7+</a>
 </p>
 </div>
+
+
+
+
+<!-- Firefox -->
+<div class="modal-overlay" id="modalOverlayfirefox" onclick="closeModalfirefox()"></div>
+<div class="modal" id="myfirefox">
+<span class="close-button" onclick="closeModalfirefox()">Zamknij</span>
+    <h3>Firefox download</h3>
+    <table>
+        <tbody>
+<tr>
+<td>Firefox</td><td>Windows 10/11</td><td>Windows 7/8</td><td>Windows Vista/Xp</td>
+</tr>
+<tr>
+<td>Msi  x86 32bit</td><td><a href="https://ftp.mozilla.org/pub/firefox/releases/122.0b9/win32/pl/Firefox%20Setup%20122.0b9.msi">122.0b9</a><br></td><td><a href="https://ftp.mozilla.org/pub/firefox/releases/115.6.0esr/win32/pl/Firefox%20Setup%20115.6.0esr.msi">115.6.0esr</a><br></td><td>-</td>
+</tr>
+<tr>
+<td>Msi  x86 64bit</td><td><a href="https://ftp.mozilla.org/pub/firefox/releases/122.0b9/win64/pl/Firefox%20Setup%20122.0b9.msi">122.0b9</a><br></td><td><a href="https://ftp.mozilla.org/pub/firefox/releases/115.6.0esr/win64/pl/Firefox%20Setup%20115.6.0esr.msi">115.6.0esr</a><br></td><td>-</td>
+</tr>
+<tr>
+<td>Exe  x86 32bit</td><td><a href="https://ftp.mozilla.org/pub/firefox/releases/122.0b9/win32/pl/Firefox%20Setup%20122.0b9.exe">122.0b9</a><br></td><td><a href="https://ftp.mozilla.org/pub/firefox/releases/115.6.0esr/win32/pl/Firefox%20Setup%20115.6.0esr.exe">115.6.0esr</a><br></td><td><a href="https://ftp.mozilla.org/pub/firefox/releases/52.9.0esr/win32/pl/Firefox%20Setup%2052.9.0esr.exe">52.9.0esr</a><br></td>
+</tr>
+<tr>
+<td>Exe  x86 64bit</td><td><a href="https://ftp.mozilla.org/pub/firefox/releases/122.0b9/win64/pl/Firefox%20Setup%20122.0b9.exe">122.0b9</a><br></td><td><a href="https://ftp.mozilla.org/pub/firefox/releases/115.6.0esr/win64/pl/Firefox%20Setup%20115.6.0esr.exe">115.6.0esr</a><br></td><td><a href="https://ftp.mozilla.org/pub/firefox/releases/52.9.0esr/win64/pl/Firefox%20Setup%2052.9.0esr.exe">52.9.0esr</a><br></td>
+</tr>
+        </tbody>
+    </table>
+</div>
+
+<script>
+    function openFirefox() {
+        document.getElementById("myfirefox").style.display = "block";
+        document.getElementById("modalOverlayfirefox").style.display = "block";
+    }
+
+    function closeModalfirefox() {
+        document.getElementById("myfirefox").style.display = "none";
+        document.getElementById("modalOverlayfirefox").style.display = "none";
+    }
+</script>
+
+
+
+
+
+
+<!-- Chrome -->
+<div class="modal-overlay" id="modalOverlaychrome" onclick="closeModalchrome()"></div>
+<div class="modal" id="mychrome">
+<span class="close-button" onclick="closeModalchrome()">Zamknij</span>
+    <h3>Chrome download</h3>
+    <table>
+        <tbody>
+<tr>
+<td>Chrome</td><td>Windows 10/11</td><td>Windows 7/8</td><td>Windows Vista/Xp</td>
+</tr>
+<tr>
+<td>Zip x86 32/64bit</td><td><a href="https://www.googleapis.com/download/storage/v1/b/chromium-browser-snapshots/o/Win%2F1192596%2Fchrome-win.zip?generation=1693946694908509&alt=media">118.0.5993.89</a></td><td><a href="https://www.googleapis.com/download/storage/v1/b/chromium-browser-snapshots/o/Win%2F1070081%2Fchrome-win.zip?generation=1668130629385203&alt=media">109.0.5414.120</a></td><td><a href="https://www.googleapis.com/download/storage/v1/b/chromium-browser-snapshots/o/Win%2F369909%2Fchrome-win32.zip?generation=1452909769196000&alt=media">49.0.2623.75</a></td>
+</tr>
+        </tbody>
+    </table>
+</div>
+
+<script>
+    function openChrome() {
+        document.getElementById("mychrome").style.display = "block";
+        document.getElementById("modalOverlaychrome").style.display = "block";
+    }
+
+    function closeModalchrome() {
+        document.getElementById("mychrome").style.display = "none";
+        document.getElementById("modalOverlaychrome").style.display = "none";
+    }
+</script>
+
+
+
+
+
+
+<!-- Chromium -->
+<div class="modal-overlay" id="modalOverlaychromium" onclick="closeModalchromium()"></div>
+<div class="modal" id="mychromium">
+<span class="close-button" onclick="closeModalchromium()">Zamknij</span>
+    <h3>Chromium download</h3>
+    <table>
+        <tbody>
+<tr>
+<td>Chromium</td><td>Windows 10/11</td><td>Windows 7/8</td><td>Windows Vista/Xp</td>
+</tr>
+<tr>
+<td>Zip x86 32bit</td><td><a href="https://www.googleapis.com/download/storage/v1/b/chromium-browser-snapshots/o/Win%2F1231125%2Fchrome-win.zip?generation=1701320479849173&alt=media">121.0.6137.1</a></td><td><a href="https://www.googleapis.com/download/storage/v1/b/chromium-browser-snapshots/o/Win%2F1070113%2Fchrome-win.zip?generation=1668135846921518&alt=media">109.0.5405.1</a></td><td><a href="https://www.googleapis.com/download/storage/v1/b/chromium-browser-snapshots/o/Win%2F364951%2Fchrome-win32.zip?generation=1450036455297000&alt=media">49.0.2591.3</a></td>
+</tr>
+<tr>
+<td>Zip x86 64bit</td><td><a href="https://www.googleapis.com/download/storage/v1/b/chromium-browser-snapshots/o/Win_x64%2F1231106%2Fchrome-win.zip?generation=1701316861709975&alt=media">121.0.6137.1</a></td><td><a href="https://www.googleapis.com/download/storage/v1/b/chromium-browser-snapshots/o/Win_x64%2F1070094%2Fchrome-win.zip?generation=1668133267247822&alt=media">109.0.5405.1</a></td><td><a href="https://www.googleapis.com/download/storage/v1/b/chromium-browser-snapshots/o/Win%2F364951%2Fchrome-win32.zip?generation=1450036455297000&alt=media">49.0.2591.3</a></td>
+</tr>
+<tr>
+<td>Exe x86 32bit</td><td><a href="https://www.googleapis.com/download/storage/v1/b/chromium-browser-snapshots/o/Win%2F1231125%2Fmini_installer.exe?generation=1701320728567082&alt=media">121.0.6137.1</a></td><td><a href="https://www.googleapis.com/download/storage/v1/b/chromium-browser-snapshots/o/Win%2F1070113%2Fmini_installer.exe?generation=1668136112306617&alt=media">109.0.5405.1</a></td><td><a href="https://www.googleapis.com/download/storage/v1/b/chromium-browser-snapshots/o/Win%2F364951%2Fmini_installer.exe?generation=1450036462895000&alt=media">49.0.2591.3</a></td>
+</tr>
+<tr>
+<td>Exe x86 64bit</td><td><a href="https://www.googleapis.com/download/storage/v1/b/chromium-browser-snapshots/o/Win_x64%2F1231106%2Fmini_installer.exe?generation=1701317150145066&alt=media">121.0.6137.1</a></td><td><a href="https://www.googleapis.com/download/storage/v1/b/chromium-browser-snapshots/o/Win_x64%2F1070094%2Fmini_installer.exe?generation=1668133525421455&alt=media">109.0.5405.1</a></td><td><a href="https://www.googleapis.com/download/storage/v1/b/chromium-browser-snapshots/o/Win%2F364951%2Fmini_installer.exe?generation=1450036462895000&alt=media">49.0.2591.3</a></td>
+</tr>
+            <!-- Dodaj więcej wierszy, jeśli potrzebujesz -->
+        </tbody>
+    </table>
+</div>
+
+<script>
+    function openChromium() {
+        document.getElementById("mychromium").style.display = "block";
+        document.getElementById("modalOverlaychromium").style.display = "block";
+    }
+
+    function closeModalchromium() {
+        document.getElementById("mychromium").style.display = "none";
+        document.getElementById("modalOverlaychromium").style.display = "none";
+    }
+</script>
+
+
+
+
+
+
+<!-- Mypal -->
+<div class="modal-overlay" id="modalOverlaymypal" onclick="closeModalmypal()"></div>
+<div class="modal" id="myMypal">
+<span class="close-button" onclick="closeModalmypal()">Zamknij</span>
+    <h3>Mypal download</h3>
+    <table>
+        <tbody>
+<tr>
+<td>Mypal</td><td>Windows XP+ (32bit)</td><td>Windows XP+ (64bit)</td>
+</tr>
+<tr>
+<td>Old Version</td><td><a href="https://www.mypal-browser.org/release/mypal-29.3.0.win32.installer.exe">29.3.0</a></td><td><a href="https://www.mypal-browser.org/release/mypal-29.3.0.win64.installer.exe">29.3.0</a></td>
+</tr>
+<tr>
+<td>New Version</td><td><a href="https://www.mypal-browser.org/release/mypal-68.13.7.en-US.win32.zip">68.13.7</a></td><td><a href="https://github.com/Feodor2/Mypal68/releases/download/68.13.8b/mypal-68.13.8.en-US.win64.zip">68.13.8</a></td>
+</tr>
+            <!-- Dodaj więcej wierszy, jeśli potrzebujesz -->
+        </tbody>
+    </table>
+</div>
+
+<script>
+    function openMypal() {
+        document.getElementById("myMypal").style.display = "block";
+        document.getElementById("modalOverlaymypal").style.display = "block";
+    }
+
+    function closeModalmypal() {
+        document.getElementById("myMypal").style.display = "none";
+        document.getElementById("modalOverlaymypal").style.display = "none";
+    }
+</script>
+
+
+
+
+
+
+
 </body>
 </html>
