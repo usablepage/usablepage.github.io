@@ -111,6 +111,15 @@ color: red;
   <br><a href="https://archive.org/download/steam_202401/steam_202401.7z">Steam 08-12-2023</a> &nbsp;Windows 7/8
   <br><a href="https://cdn.akamai.steamstatic.com/client/installer/SteamSetup.exe">Newest Steam</a> &nbsp;Windows 10+
   <br><a href="https://epicgames-download1.akamaized.net/Builds/UnrealEngineLauncher/Installers/Win32/EpicInstaller-15.17.1.msi?launcherfilename=EpicInstaller-15.17.1.msi">Epic Games</a> &nbsp;Windows 7+
+</p>
+<h3>Windows'y</h3>
+<p> <button onclick="openWindows11()">Windows 11</button>
+<br><button onclick="openWindows10()">Windows 10</button>
+<br><button onclick="openWindows8()">Windows 8.1</button>
+<br><button onclick="openWindows7()">Windows 7</button>
+<br><button onclick="openWindowsVista()">Windows Vista</button>
+<br><button onclick="openWindowsXP()">Windows XP</button>
+</p>
 </div>
 
 <!-- Firefox -->
@@ -238,5 +247,130 @@ document.getElementById("myMypal").style.display = "none";
 document.getElementById("modalOverlaymypal").style.display = "none";
 }
 </script>
+
+
+
+<!-- Windows 11 -->
+<div class="modal-overlay" id="modalOverlayWindows11" onclick="closeModalWindows11()"></div>
+<div class="modal" id="myWindows11">
+<span class="close-button" onclick="closeModalWindows11()">Zamknij</span>
+<h3>Windows 11 download</h3>
+
+</div>
+<script>
+function openWindows11() {
+document.getElementById("myWindows11").style.display = "block";
+document.getElementById("modalOverlayWindows11").style.display = "block";
+}
+function closeModalWindows11() {
+document.getElementById("myWindows11").style.display = "none";
+document.getElementById("modalOverlayWindows11").style.display = "none";
+}
+</script>
+
+<!-- Windows 10 -->
+<div class="modal-overlay" id="modalOverlayWindows10" onclick="closeModalWindows10()"></div>
+<div class="modal" id="myWindows10">
+<span class="close-button" onclick="closeModalWindows10()">Zamknij</span>
+<h3>Windows 10 download</h3>
+
+</div>
+<script>
+function openWindows10() {
+document.getElementById("myWindows10").style.display = "block";
+document.getElementById("modalOverlayWindows10").style.display = "block";
+}
+function closeModalWindows10() {
+document.getElementById("myWindows10").style.display = "none";
+document.getElementById("modalOverlayWindows10").style.display = "none";
+}
+</script>
+
+<!-- Windows 8 -->
+<div class="modal-overlay" id="modalOverlayWindows8" onclick="closeModalWindows8()"></div>
+<div class="modal" id="myWindows8">
+<span class="close-button" onclick="closeModalWindows8()">Zamknij</span>
+<h3>Windows 8 download</h3>
+
+</div>
+<script>
+function openWindows8() {
+document.getElementById("myWindows8").style.display = "block";
+document.getElementById("modalOverlayWindows8").style.display = "block";
+}
+function closeModalWindows8() {
+document.getElementById("myWindows8").style.display = "none";
+document.getElementById("modalOverlayWindows8").style.display = "none";
+}
+</script>
+
+<!-- Windows 7 -->
+<div class="modal-overlay" id="modalOverlayWindows7" onclick="closeModalWindows7()"></div>
+<div class="modal" id="myWindows7">
+<span class="close-button" onclick="closeModalWindows7()">Zamknij</span>
+<h3>Windows 7 download</h3>
+
+</div>
+<script>
+function openWindows7() {
+document.getElementById("myWindows7").style.display = "block";
+document.getElementById("modalOverlayWindows7").style.display = "block";
+}
+function closeModalWindows7() {
+document.getElementById("myWindows7").style.display = "none";
+document.getElementById("modalOverlayWindows7").style.display = "none";
+}
+</script>
+
+<!-- Windows Vista -->
+<div class="modal-overlay" id="modalOverlayWindowsVista" onclick="closeModalWindowsVista()"></div>
+<div class="modal" id="myWindowsVista">
+<span class="close-button" onclick="closeModalWindowsVista()">Zamknij</span>
+<h3>Windows Vista download</h3>
+
+</div>
+<script>
+function openWindowsVista() {
+document.getElementById("myWindowsVista").style.display = "block";
+document.getElementById("modalOverlayWindowsVista").style.display = "block";
+}
+function closeModalWindowsVista() {
+document.getElementById("myWindowsVista").style.display = "none";
+document.getElementById("modalOverlayWindowsVista").style.display = "none";
+}
+</script>
+
+
+
+<!-- Windows XP -->
+<div class="modal-overlay" id="modalOverlayWindowsXP" onclick="closeModalWindowsXP()"></div>
+<div class="modal" id="myWindowsXP">
+<span class="close-button" onclick="closeModalWindowsXP()">Zamknij</span>
+<h3>Windows XP download</h3>
+
+</div>
+<script>
+function openWindowsXP() {
+document.getElementById("myWindowsXP").style.display = "block";
+document.getElementById("modalOverlayWindowsXP").style.display = "block";
+}
+function closeModalWindowsXP() {
+document.getElementById("myWindowsXP").style.display = "none";
+document.getElementById("modalOverlayWindowsXP").style.display = "none";
+}
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+  
 </body>
 </html>
